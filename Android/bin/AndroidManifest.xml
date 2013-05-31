@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nyanCatAttack.main"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Nyan Tests. NYAN NYAN NYAN NYAN NYAN"
+        android:targetPackage="nyanCatAttack.main" />
+
+    <application
+        android:label="@string/app_name" >
+        <activity
+            android:name=".Launcher"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="nyanCatAttack.gui.NyanCatActivity"
+            android:description="@layout/game"
+            android:enabled="true"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+</manifest>
